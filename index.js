@@ -18,9 +18,9 @@ const connect = async ()=>{
 }
 
 app.use(express.json())
-app.use(cors({origin:'https://directory-mern-frontend.vercel.app/'}))
+app.use(cors({origin:'https://directory-mern-frontend.vercel.app'}))
 app.use((req, res, next) => {
-    const allowedOrigins = ['https://directory-mern-frontend.vercel.app/', 'www.example2.com', 'www.example3.com'];
+    const allowedOrigins = ['https://directory-mern-frontend.vercel.app'];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
       res.setHeader('Access-Control-Allow-Origin', origin);
