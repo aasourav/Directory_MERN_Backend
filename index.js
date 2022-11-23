@@ -18,7 +18,7 @@ const connect = async ()=>{
 }
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({credentials:true, origin:'https://directory-mern-frontend.vercel.app/'}))
 app.use('/', folderRoute)
 
 
