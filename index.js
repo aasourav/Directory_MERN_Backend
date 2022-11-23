@@ -19,14 +19,14 @@ const connect = async ()=>{
 
 app.use(express.json())
 app.use(cors({origin:'https://directory-mern-frontend.vercel.app'}))
-app.use((req, res, next) => {
-    const allowedOrigins = ['https://directory-mern-frontend.vercel.app'];
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-      res.setHeader('Access-Control-Allow-Origin', origin);
-    }
-    return next();
-  })
+// app.use((req, res, next) => {
+//     const allowedOrigins = ['https://directory-mern-frontend.vercel.app'];
+//     const origin = req.headers.origin;
+//     if (allowedOrigins.includes(origin)) {
+//       res.setHeader('Access-Control-Allow-Origin', origin);
+//     }
+//     return next();
+//   })
 app.use('/', folderRoute)
 
 
