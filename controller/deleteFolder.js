@@ -1,6 +1,7 @@
 const FolderModel = require('../model/folserModel');
 
-const deleteFolder = async (req,res)=>{
+const deleteFolder = async (req,res,next)=>{
+
     const parentId = req.params.id.split('&')[0];
     const parentOFparent = req.params.id.split('&')[1];
 
@@ -23,6 +24,7 @@ const deleteFolder = async (req,res)=>{
         next()
     }
     catch(er){
+        console.log(er.message)
         res.status(500).send("Error in folder delete");
     }
 }
