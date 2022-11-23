@@ -28,8 +28,8 @@ mongoose.connection.on("disconnected",()=>{
 mongoose.connection.on("connected",()=>{
     console.log("Mongo Is Connected again...");
 })
-
-app.listen(9000,()=>{
+const port = process.env.PORT || 9000
+app.listen(port,()=>{
     connect();
     console.log("Server On.....")
 })
