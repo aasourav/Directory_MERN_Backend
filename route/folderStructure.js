@@ -9,7 +9,7 @@ const folderRoute = express.Router();
 
 folderRoute.get('/getFolder/',addRoot,getFolder)
 folderRoute.post('/addFolder/:id',addFolder,getFolder)
-folderRoute.delete('/deleteFolder/:id',deleteFolder)
+folderRoute.delete('/deleteFolder/:id',deleteFolder,getFolder)
 
 
 module.exports = folderRoute;
